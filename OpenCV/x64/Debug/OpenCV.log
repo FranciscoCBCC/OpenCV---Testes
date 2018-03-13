@@ -1,0 +1,6 @@
+﻿  Source.cpp
+c:\users\francisco\desktop\cg\opencv\opencv\source.cpp(88): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\francisco\desktop\cg\opencv\opencv\source.cpp(89): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\francisco\desktop\cg\opencv\opencv\source.cpp(99): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  OpenCV.vcxproj -> C:\Users\Francisco\Desktop\CG\OpenCV\x64\Debug\OpenCV.exe
+  OpenCV.vcxproj -> C:\Users\Francisco\Desktop\CG\OpenCV\x64\Debug\OpenCV.pdb (Full PDB)

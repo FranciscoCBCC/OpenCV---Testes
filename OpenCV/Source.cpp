@@ -94,21 +94,22 @@ void detectAndDisplay(Mat frame)
 		//-- In each face, detect eyes
 		eyes_cascade.detectMultiScale(faceROI, eyes, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, Size(30, 30));
 
-		for (size_t j = 0; j < 1; j++)
+		for (size_t j = 0; j < eyes.size(); j++)
 		{
 			Point center(faces[i].x + eyes[j].x + eyes[j].width*0.5, faces[i].y + eyes[j].y + eyes[j].height*0.5);
 			int radius = cvRound((eyes[j].width + eyes[j].height)*0.25);
 			circle(frame, center, radius, Scalar(255, 0, 0), 4, 8, 0);
 			Point a(center.x, center.y);
 			line(frame, a, a, Scalar(110, 220, 0), 2, 8);
-			for (size_t j = 1; j < 2; j++)
+			for (size_t k = 1; k < eyes.size(); k++)
 			{
-				Point center(faces[i].x + eyes[j].x + eyes[j].width*0.5, faces[i].y + eyes[j].y + eyes[j].height*0.5);
-				int radius = cvRound((eyes[j].width + eyes[j].height)*0.25);
+				Point center(faces[i].x + eyes[k].x + eyes[k].width*0.5, faces[i].y + eyes[k].y + eyes[k].height*0.5);
+				int radius = cvRound((eyes[k].width + eyes[k].height)*0.25);
 				circle(frame, center, radius, Scalar(255, 0, 0), 4, 8, 0);
 				Point b(center.x, center.y);
 				line(frame, a, b, Scalar(110, 220, 0), 2, 8);
 			}
+			
 		}
 		
 
